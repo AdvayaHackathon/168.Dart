@@ -1,0 +1,227 @@
+/* Reset & base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+header { background: #1e2a78; color: white; padding: 20px; text-align: center; }
+
+header h1 { margin: 0; font-size: 2rem; }
+
+.main-nav { display: flex; justify-content: center; background: #fff; border-bottom: 1px solid #ddd; flex-wrap: wrap; }
+
+.main-nav a { padding: 15px 20px; text-decoration: none; color: #1e2a78; font-weight: 600; transition: 0.3s; }
+
+.main-nav a:hover, .main-nav a.active { background: #e4e9f3; border-bottom: 3px solid #1e2a78; }
+
+h1, h2 {
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+/* Container */
+.quiz-container {
+  max-width: 720px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  padding: 2rem;
+}
+
+/* Category Selector */
+.selector {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.selector label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.selector select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.selector button {
+  padding: 0.6rem 1.2rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  background-color: #2e6ef7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.selector button:hover {
+  background-color: #1c50c9;
+}
+
+/* Question Area */
+#question-box {
+  text-align: center;
+}
+
+#question {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+#options button {
+  padding: 0.75rem 1rem;
+  border: 2px solid transparent;
+  background-color: #f1f3f5;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background-color: #e4e6e9;
+}
+
+/* Answer Feedback */
+.correct {
+  background-color: #d4edda !important;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.wrong {
+  background-color: #f8d7da !important;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+/* Timer */
+#timer {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #e63946;
+  font-size: 1.1rem;
+}
+
+/* Next Button */
+#next-btn {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #2e6ef7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+}
+
+#next-btn:hover {
+  background-color: #1c50c9;
+}
+
+/* Result Box */
+#result-box {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#result-box button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Q&A Section */
+.qa-section {
+  max-width: 720px;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.qa-section input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.qa-section button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#qa-display {
+  margin-top: 1rem;
+  text-align: left;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+#qa-display div {
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+.qa-item {
+  background-color: #f9f9fb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.answer-input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.qa-item button {
+  background-color: #2e6ef7;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.qa-item button:hover {
+  background-color: #1c50c9;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Career Yatra | SikshaGrama</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <header>
+    <h1>🧭 Career Yatra – Visual Roadmap</h1>
+    <nav class="main-nav">
+      <a href="index.html">🏠 Home</a>
+      <a href="bookshelf.html" >📚 Bookshelf</a>
+      <a href="career.html"class="active">🧭 Career Yatra</a>
+      <a href="exams.html">📝 Exams</a>
+      <a href="news.html">🌍 News</a>
+      <a href="quizzes.html">🧠 Quizzes</a>
+    </nav>
+  </header>
+
+  <main class="roadmap">
+    <h2>🗺 Explore After Class 10</h2>
+
+    <div class="tree-container">
+      <svg class="tree-lines" viewBox="0 0 500 300">
+        <line x1="250" y1="30" x2="250" y2="100" stroke="#1e2a78" stroke-width="2"/>
+        <line x1="250" y1="100" x2="100" y2="170" stroke="#1e2a78" stroke-width="2"/>
+        <line x1="250" y1="100" x2="250" y2="170" stroke="#1e2a78" stroke-width="2"/>
+        <line x1="250" y1="100" x2="400" y2="170" stroke="#1e2a78" stroke-width="2"/>
+      </svg>
+
+      <div class="tree-node" style="top: 30px; left: 50%;">🎓 Class 10</div>
+      <div class="tree-node clickable" style="top: 170px; left: 20%;" onclick="toggleBranch('science')">🔬 Science</div>
+      <div class="tree-node clickable" style="top: 170px; left: 50%;" onclick="toggleBranch('commerce')">💼 Commerce</div>
+      <div class="tree-node clickable" style="top: 170px; left: 80%;" onclick="toggleBranch('arts')">🎨 Arts</div>
+    </div>
+
+    <!-- SCIENCE STREAM -->
+    <div id="science" class="branch-details">
+      <h3>🔬 Science Stream</h3>
+      <ul class="sub-branch open">
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('engineering')">⚙ Engineering</span>
+          <ul class="sub-branch" id="engineering">
+            <li><a href="#">B.Tech in CSE</a> – Software Engineer, AI Developer</li>
+            <li><a href="#">B.Tech in Mechanical</a> – CAD Engineer, Production Manager</li>
+            <li><a href="#">B.Tech in Civil</a> – Structural Engineer, Site Planner</li>
+          </ul>
+        </li>
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('medical')">🩺 Medical</span>
+          <ul class="sub-branch" id="medical">
+            <li><a href="#">MBBS</a> – Doctor, Surgeon</li>
+            <li><a href="#">BDS</a> – Dentist</li>
+            <li><a href="#">BPT</a> – Physiotherapist</li>
+          </ul>
+        </li>
+        <li><a href="#">B.Sc in IT</a> – Cybersecurity Analyst, IT Support</li>
+      </ul>
+    </div>
+
+    <!-- COMMERCE STREAM -->
+    <div id="commerce" class="branch-details">
+      <h3>💼 Commerce Stream</h3>
+      <ul class="sub-branch open">
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('finance')">📊 Finance</span>
+          <ul class="sub-branch" id="finance">
+            <li><a href="#">B.Com</a> – Accountant, Auditor</li>
+            <li><a href="#">CA Foundation</a> – Chartered Accountant</li>
+          </ul>
+        </li>
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('business')">🏢 Business & Management</span>
+          <ul class="sub-branch" id="business">
+            <li><a href="#">BBA</a> – Business Analyst, Marketing Manager</li>
+            <li><a href="#">Diploma in HR</a> – HR Executive</li>
+          </ul>
+        </li>
+        <li><a href="#">Banking Diploma</a> – Banker, Loan Officer</li>
+      </ul>
+    </div>
+
+    <!-- ARTS STREAM -->
+    <div id="arts" class="branch-details">
+      <h3>🎨 Arts Stream</h3>
+      <ul class="sub-branch open">
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('creative')">🎭 Creative Arts</span>
+          <ul class="sub-branch" id="creative">
+            <li><a href="#">Diploma in Fine Arts</a> – Illustrator, Designer</li>
+            <li><a href="#">BFA</a> – Visual Artist, Curator</li>
+          </ul>
+        </li>
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('media')">📰 Media & Journalism</span>
+          <ul class="sub-branch" id="media">
+            <li><a href="#">BA in Journalism</a> – Reporter, Editor</li>
+            <li><a href="#">Mass Comm Diploma</a> – Anchor, Producer</li>
+          </ul>
+        </li>
+        <li>
+          <span class="branch clickable" onclick="toggleSubBranch('social')">🧠 Psychology & Social Work</span>
+          <ul class="sub-branch" id="social">
+            <li><a href="#">BA in Psychology</a> – Therapist, Counselor</li>
+            <li><a href="#">BA in Sociology</a> – NGO Worker, Policy Analyst</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>© 2025 SikshaGrama. All rights reserved.</footer>
+
+  <script>
+    function toggleBranch(id) {
+      document.querySelectorAll('.branch-details').forEach(branch => {
+        branch.style.display = (branch.id === id && branch.style.display !== 'block') ? 'block' : 'none';
+      });
+    }
+
+    function toggleSubBranch(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('open');
+      }
+    }
+
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.branch-details').forEach(el => el.style.display = 'none');
+    });
+  </script>
+</body>
+</html>

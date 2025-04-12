@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📝 ExamsWorld | Competitive Exams Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/styles3.css" />
+  <link rel="stylesheet" href="css/exams.css" />
+</head>
+<body>
+  <header>
+    <h1>📝 ExamsWorld – Explore & Prepare</h1>
+    <nav class="main-nav">
+        <a href="index.html" >🏠 Home</a>
+        <a href="career.html">🧭 Career Yatra</a>
+        <a href="bookshelf.html">📚 Bookshelf</a>
+        <a href="news.html">🌍 News</a>
+        <a href="exams.html"class="active">📝 Exams</a>
+        <a href="quizzes.html">🧠 Quizzes</a>
+  </header>
+
+ 
+  <main class="container">
+    <div class="filter-buttons">
+      <button onclick="filterExams('all')" class="active">🌐 All</button>
+      <button onclick="filterExams('indian')">🇮🇳 Indian</button>
+      <button onclick="filterExams('international')">🌍 International</button>
+    </div>
+
+    <div class="exam-container" id="examContainer">
+      <!-- UPSC -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">🇮🇳 UPSC Civil Services</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://ncert.nic.in/ebook.aspx" target="_blank">NCERT Book PDFs</a></li>
+      <li>📕 <a href="https://arihantbooks.com/" target="_blank">Arihant GS & CSAT Books</a></li>
+      <li>🎓 <a href="https://byjus.com/free-ias-prep/" target="_blank">Byju's Free IAS Prep</a></li>
+      <li>▶ <a href="https://www.youtube.com/@StudyIQEducation" target="_blank">StudyIQ UPSC Videos</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- SSC -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">🧾 SSC CGL & CHSL</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📕 <a href="https://arihantbooks.com/" target="_blank">Arihant SSC Books</a></li>
+      <li>🎓 <a href="https://www.testbook.com/ssc-cgl/courses" target="_blank">Testbook SSC Courses</a></li>
+      <li>▶ <a href="https://www.youtube.com/@wifistudy" target="_blank">Wifistudy SSC Playlist</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- JEE -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">🧪 JEE (Engineering)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://ncert.nic.in/ebook.aspx" target="_blank">NCERT PCM Books</a></li>
+      <li>📕 <a href="https://arihantbooks.com/jee-main" target="_blank">Arihant JEE Series</a></li>
+      <li>🎓 <a href="https://unacademy.com/goal/jee-main-and-advanced-preparation/TMUVD" target="_blank">Unacademy JEE</a></li>
+      <li>▶ <a href="https://www.youtube.com/@PhysicsWallah" target="_blank">Physics Wallah</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- NEET -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">🩺 NEET (Medical)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://ncert.nic.in/ebook.aspx" target="_blank">NCERT Biology & Chemistry</a></li>
+      <li>📕 <a href="https://arihantbooks.com/neet" target="_blank">Arihant NEET Books</a></li>
+      <li>🎓 <a href="https://neetprep.com" target="_blank">NEETPrep Course</a></li>
+      <li>▶ <a href="https://www.youtube.com/@BiologyatEase" target="_blank">Biology at Ease</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- GATE -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">⚙ GATE (Post Engineering)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://gate.iitk.ac.in/" target="_blank">GATE Syllabus PDFs</a></li>
+      <li>🎓 <a href="https://nptel.ac.in/" target="_blank">NPTEL Engineering Courses</a></li>
+      <li>▶ <a href="https://www.youtube.com/@MadeEasy" target="_blank">MadeEasy YouTube</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- CLAT -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">⚖ CLAT (Law Entrance)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📕 <a href="https://arihantbooks.com/clat" target="_blank">Arihant CLAT Guide</a></li>
+      <li>🎓 <a href="https://toprankers.com/clat" target="_blank">Toprankers Online Coaching</a></li>
+      <li>▶ <a href="https://www.youtube.com/@LegalEdgeCLAT" target="_blank">LegalEdge Channel</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- NDA -->
+<div class="exam-card" data-category="indian">
+  <div class="exam-title">🪖 NDA (Defense Services)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📕 <a href="https://arihantbooks.com/nda" target="_blank">Arihant NDA Books</a></li>
+      <li>🎓 <a href="https://www.ssbatguru.com/" target="_blank">SSB Guru Academy</a></li>
+      <li>▶ <a href="https://www.youtube.com/@MajorKalshiClasses" target="_blank">Major Kalshi NDA Prep</a></li>
+    </ul>
+  </div>
+</div>
+<!-- SAT -->
+<div class="exam-card" data-category="international">
+  <div class="exam-title">🌍 SAT (Abroad Admissions)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://collegereadiness.collegeboard.org/sat/practice" target="_blank">SAT Official Practice</a></li>
+      <li>🎓 <a href="https://khanacademy.org/sat" target="_blank">Khan Academy Free SAT Course</a></li>
+      <li>▶ <a href="https://www.youtube.com/@SuperTutorTV" target="_blank">SuperTutorTV SAT Videos</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- GRE -->
+<div class="exam-card" data-category="international">
+  <div class="exam-title">🎓 GRE (Graduate Studies)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://www.ets.org/gre/test-takers/general-test/prepare.html" target="_blank">ETS GRE PDFs</a></li>
+      <li>🎓 <a href="https://magoosh.com/gre/" target="_blank">Magoosh GRE Prep</a></li>
+      <li>▶ <a href="https://www.youtube.com/@GregMat" target="_blank">GregMat GRE Channel</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- IELTS -->
+<div class="exam-card" data-category="international">
+  <div class="exam-title">🗣 IELTS (English Proficiency)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://www.ielts.org/about-ielts/ielts-practice-tests" target="_blank">IELTS Sample PDFs</a></li>
+      <li>🎓 <a href="https://www.futurelearn.com/courses/understanding-ielts" target="_blank">FutureLearn Free Course</a></li>
+      <li>▶ <a href="https://www.youtube.com/@E2IELTS" target="_blank">E2 IELTS YouTube</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOEFL -->
+<div class="exam-card" data-category="international">
+  <div class="exam-title">📝 TOEFL (Academic English)</div>
+  <button class="toggle-btn" onclick="toggleResources(this)">Show Resources</button>
+  <div class="toggle-resources">
+    <ul class="resources">
+      <li>📘 <a href="https://www.ets.org/toefl/test-takers/ibt/prepare.html" target="_blank">ETS TOEFL PDFs</a></li>
+      <li>🎓 <a href="https://magoosh.com/toefl/" target="_blank">Magoosh TOEFL Prep</a></li>
+      <li>▶ <a href="https://www.youtube.com/@TOEFLTV" target="_blank">TOEFL Official Channel</a></li>
+    </ul>
+  </div>
+</div>
+
+    </div>
+  </main>
+
+  <footer>© 2025 ExamsWorld. All rights reserved.</footer>
+
+  <script src="js/exams.js"></script>
+</body>
+</html>

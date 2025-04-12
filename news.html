@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News | SikshaaGrama</title>
+  <link rel="stylesheet" href="css/news.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">SikshaaGrama</div>
+    <nav class="main-nav">
+      <a href="index.html" >🏠 Home</a>
+      <a href="career.html">🧭 Career Yatra</a>
+      <a href="bookshelf.html">📚 Bookshelf</a>
+      <a href="news.html"class="active">🌍 News</a>
+      <a href="exams.html">📝 Exams</a>
+      <a href="quizzes.html">🧠 Quizzes</a>
+    </nav>
+    <input type="text" id="news-search" placeholder="Search UPSC-relevant news..." />
+  </header>
+
+  <!-- Tabs -->
+  <section class="tabs-container">
+    <button class="tab-btn active" data-category="global">🌍 Global News</button>
+    <button class="tab-btn" data-category="local">🏡 Local News</button>
+    <button class="tab-btn" data-category="upsc">📘 UPSC Focus</button>
+  </section>
+
+  <!-- News Cards -->
+  <section id="news-container" class="news-grid">
+    <!-- Cards rendered here by JS -->
+  </section>
+
+  <script src="js/news.js"></script>
+</body>
+</html>

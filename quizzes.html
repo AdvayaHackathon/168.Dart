@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz | SikshaaGrama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/quiz.css" />
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>🧠 SikshaaGrama Quiz</h1>
+    <nav class="main-nav">
+      <a href="index.html"></a>>🏠 Home</a>
+      <a href="bookshelf.html" >📚 Bookshelf</a>
+      <a href="career.html"></a>🧭 Career Yatra</a>
+      <a href="exams.html">📝 Exams</a>
+      <a href="news.html">🌍 News</a>
+      <a href="quizzes.html"class="active">🧠 Quizzes</a>
+    </nav>
+
+    <div class="selector">
+      <label for="category">Select Category:</label>
+      <select id="category">
+        <option value="9">General Knowledge</option>
+        <option value="17">Science & Nature</option>
+        <option value="19">Mathematics</option>
+        <option value="23">History</option>
+      </select>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="question-box" class="hidden">
+      <p id="question"></p>
+      <div id="options"></div>
+      <p id="timer">⏳ 15</p>
+      <button id="next-btn" onclick="loadQuestion()">Next</button>
+    </div>
+
+    <div id="result-box" class="hidden">
+      <h2>🏁 Quiz Completed!</h2>
+      <p id="score-text"></p>
+      <button onclick="location.reload()">Try Another Category</button>
+    </div>
+  </div>
+
+  <div class="qa-section">
+    <h2>💬 Ask & Answer</h2>
+    <input type="text" id="user-question" placeholder="Type your question here..." />
+    <button onclick="submitQuestion()">Post Question</button>
+  
+    <div id="qa-display">
+      <!-- Questions & answers will be dynamically added here -->
+    </div>
+  </div>
+  
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
